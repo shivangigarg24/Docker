@@ -20,6 +20,20 @@ RUN apt-get install -y curl grep sed dpkg && \
     dpkg -i tini.deb && \
     rm tini.deb && \
     apt-get clean
+    
+RUN apt-get install -y p7zip \
+    p7zip-full \
+    unace \
+    zip \
+    unzip \
+    xz-utils \
+    sharutils \
+    uudeview \
+    mpack \
+    arj \
+    cabextract \
+    file-roller \
+    && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]
