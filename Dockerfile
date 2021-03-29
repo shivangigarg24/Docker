@@ -20,6 +20,11 @@ RUN apt-get install -y curl grep sed dpkg && \
     dpkg -i tini.deb && \
     rm tini.deb && \
     apt-get clean
+    
+# Install unzip
+RUN apt-get install -y unzip
+# Install curl
+RUN apt-get install -y curl
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]
