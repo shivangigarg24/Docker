@@ -37,7 +37,7 @@ RUN mkdir /workspace && \
     cd /workspace && \    
     git clone https://github.com/MILVLG/openvqa.git && \
     cd openvqa &&\
-    pip install -r tools/requirements.txt && \
+    pip install -r requirements.txt && \
     wget https://github.com/explosion/spacy-models/releases/download/en_vectors_web_lg-2.1.0/en_vectors_web_lg-2.1.0.tar.gz -O en_vectors_web_lg-2.1.0.tar.gz && \
     pip install en_vectors_web_lg-2.1.0.tar.gz && \
     rm en_vectors_web_lg-2.1.0.tar.gz && \
