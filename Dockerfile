@@ -35,9 +35,9 @@ RUN conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
 # clone and install openvqa dependencies
 RUN mkdir /workspace && \
     cd /workspace && \    
-    git clone https://github.com/MILVLG/openvqa.git && \
-    cd openvqa &&\
-    pip install -r requirements.txt && \
+    git clone https://github.com/linjieli222/VQA_ReGAT.git && \
+    cd VQA_ReGAT &&\
+    pip install -r tools/requirements.txt && \
     wget https://github.com/explosion/spacy-models/releases/download/en_vectors_web_lg-2.1.0/en_vectors_web_lg-2.1.0.tar.gz -O en_vectors_web_lg-2.1.0.tar.gz && \
     pip install en_vectors_web_lg-2.1.0.tar.gz && \
     rm en_vectors_web_lg-2.1.0.tar.gz && \
