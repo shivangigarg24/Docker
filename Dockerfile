@@ -20,7 +20,7 @@ RUN apt-get install -y curl grep sed dpkg && \
     dpkg -i tini.deb && \
     rm tini.deb && \
     apt-get clean
-    
+RUN echo "curl_install_log"    
 RUN apt-get install -y p7zip \
     p7zip-full \
     unace \
@@ -35,6 +35,7 @@ RUN apt-get install -y p7zip \
     file-roller \
     && rm -rf /var/lib/apt/lists/*
 
+RUN echo "zip_install_log"
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]
