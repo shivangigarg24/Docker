@@ -18,13 +18,10 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.
 RUN apt-get install zip unzip
 RUN apt-get update
 
-# install pytorch 1.1 and cudatoolkit
-RUN conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
-
 # clone and install openvqa dependencies
 RUN mkdir /workspace && \
     cd /workspace && \    
-    git clone https://github.com/linjieli222/VQA_ReGAT.git && \
+    git clone https://github.com/shivangigarg24/VQA_ReGAT.git && \
     cd VQA_ReGAT
     
 RUN conda env create -f /workspace/VQA_ReGAT/tools/environment.yml
