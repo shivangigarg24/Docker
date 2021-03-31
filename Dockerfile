@@ -27,10 +27,10 @@ RUN mkdir /workspace && \
     git clone https://github.com/linjieli222/VQA_ReGAT.git && \
     cd VQA_ReGAT
     
-RUN conda env create -f /tools/environment.yml
+RUN conda env create -f /workspace/VQA_ReGAT/tools/environment.yml
 
 # Activate the environment, and make sure it's activated:
 RUN conda activate vqa
 
-RUN /bin/bash -c "source /tools/download.sh"
+RUN /bin/bash -c "source /workspace/VQA_ReGAT/tools/download.sh"
 
