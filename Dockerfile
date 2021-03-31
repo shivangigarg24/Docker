@@ -25,7 +25,7 @@ RUN conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
 RUN mkdir /workspace && \
     cd /workspace && \    
     git clone https://github.com/linjieli222/VQA_ReGAT.git && \
-    cd /VQA_ReGAT
+    cd VQA_ReGAT
     
 RUN conda env create -f /tools/environment.yml
 
