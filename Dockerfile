@@ -17,6 +17,7 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.
 
 RUN apt-get install zip unzip
 RUN apt-get install nano
+RUN apt-get install gedit
 RUN apt-get update
 
 # clone and install openvqa dependencies
