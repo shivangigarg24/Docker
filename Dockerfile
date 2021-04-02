@@ -3,7 +3,7 @@ FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu16.04
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:$PATH
 
-RUN apt-get install -y wget
+RUN apt-get install wget
 
 RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh -O ~/anaconda.sh && \
     /bin/bash ~/anaconda.sh -b -p /opt/conda && \
