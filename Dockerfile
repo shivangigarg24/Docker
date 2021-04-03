@@ -20,6 +20,7 @@ RUN apt-get install nano
 RUN apt-get install -y gedit
 RUN apt-get update
 
+RUN useradd -ms /bin/bash admin
 # clone and install openvqa dependencies
 RUN mkdir /workspace && \
     cd /workspace && \    
@@ -31,7 +32,10 @@ RUN conda env create -f /workspace/VQA_ReGAT/tools/environment.yml
 # Activate the environment, and make sure it's activated:
 #CMD ["conda", "run", "-n", "v"]
 RUN /bin/bash -c "source activate vqa"
-RUN useradd -ms /bin/bash shivangi_user
-USER shivangi_user
+
+WORKDIR /workspace
+RUN chown -R admin:admin /workspace
+RUN chmod 755 /workspace
+USER admin 
 #RUN /bin/bash -c "source /workspace/VQA_ReGAT/tools/download.sh"
 
