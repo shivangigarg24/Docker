@@ -35,7 +35,7 @@ RUN /bin/bash -c "source activate vqa"
 
 WORKDIR /workspace
 RUN chown -R admin:admin /workspace
-RUN chmod 755 /workspace
+RUN chmod 777 /workspace
 USER admin 
 #RUN /bin/bash -c "source /workspace/VQA_ReGAT/tools/download.sh"
 
