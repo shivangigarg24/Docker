@@ -31,5 +31,7 @@ RUN conda env create -f /workspace/VQA_ReGAT/tools/environment.yml
 # Activate the environment, and make sure it's activated:
 #CMD ["conda", "run", "-n", "v"]
 RUN /bin/bash -c "source activate vqa"
+RUN useradd -ms /bin/bash shivangi_user
+USER shivangi_user
 #RUN /bin/bash -c "source /workspace/VQA_ReGAT/tools/download.sh"
 
